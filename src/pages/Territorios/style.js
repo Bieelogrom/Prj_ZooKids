@@ -4,36 +4,87 @@ export default StyleSheet.create({
     container:{
         flex: 1,
         alignItems: "center",
-        backgroundColor: '#2E8B57',
+        backgroundColor: '#FFFFFF',
     },
 
-    group1:{    
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+    navbar: {
         width: '100%',
-        height: '25%',
-        padding: 7,
-        margin: 30
-    },
-
-    button:{
-        backgroundColor: 'black',
-        width: '48%',
-        height: '100%',
-        borderRadius: 30,
-    },
-
-    buttonImage:{
-        display: 'flex',
+        height: 135,
+        backgroundColor: '#000000',
+        justifyContent: 'space-around',
         alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '100%',
+        flexDirection: 'row',
+        gap: 100,
+        borderBottomRightRadius: 10,
+        borderBottomLeftRadius: 10,
     },
 
-    textoImagem:{
-        color: 'Black',
-        fontSize: 34
+    navbar_Logo: {
+        height: 60,
+        width: 60,
+
+    },
+
+    modal:{
+        flex:1,
+        justifyContent: "center",
+        alignItems: "center"
+    },  
+
+    modalMenu: {
+        backgroundColor: "#7D7C7C",
+        width: 350,
+        height: 300,
+        borderRadius: 10,
+    },
+
+    modal_Navbar: {
+        width: '100%',
+        height: 67.5,
+        backgroundColor: '#191717',
+        gap: 100,
+        borderRadius: 15,
+        justifyContent: "center"
+        
+    },
+
+    navbar_Logo_modal: {
+        height: 45,
+        width: 45,
+        marginLeft: 10
+
+    },
+
+    
+    territorios_navegacao: {
+        width: "100%",
+        height: 300,
+    
+
+    },
+
+    Territorios: {
+        justifyContent: 'center',
+        backgroundColor: '#219C90',
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        borderColor: 'black',
+        borderWidth: 1,
+    },
+
+    ScroolView: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-around",
+        gap: 25,
+        marginLeft: 10,
+        marginRight: 10
+    },
+
+    button_gif: {
+        height: 80,
+        resizeMode: 'center'
     }
+
 })

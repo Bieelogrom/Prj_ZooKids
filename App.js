@@ -12,14 +12,15 @@ import Sobre from './src/pages/Sobre';
 const Stack = createNativeStackNavigator ();
 
 export default function app(){
+
   return(
     <NavigationContainer> 
       <Stack.Navigator>
         <Stack.Screen name="Splash-Screen" component={SplashScreen} options={{headerShown:false}}  />
         <Stack.Screen name="BemVindo" component={Home} options={{headerShown:false}} />
-        <Stack.Screen name="Territorios" component={Territorios} />
-        <Stack.Screen name="Home" component={Cadastro} options={{headerShown:false}} />
-        <Stack.Screen name="Sobre" component={Sobre} />
+        <Stack.Screen name="Territorios" component={Territorios} options={{headerShown:false}} />
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{headerShown:false}} />
+        <Stack.Screen name="Sobre" component={Sobre} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

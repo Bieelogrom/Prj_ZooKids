@@ -12,7 +12,9 @@ export default StyleSheet.create({
         width: '100%',
         height: 135,
         backgroundColor: '#000000',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderBottomRightRadius: 10,
+        borderBottomLeftRadius: 10,
     },
 
     navbar_Logo: {

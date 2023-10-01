@@ -8,6 +8,12 @@ let nome = localStorage.getItem("nome")
 
 export default function Home(){
     const navigation = useNavigation ();
+
+    function Territorios () {
+        navigation.navigate('Territorios')
+      }  
+
+
     return(
         <View style={styles.container}>
             <View style={styles.navbar}>
@@ -17,19 +23,14 @@ export default function Home(){
             <View style={styles.botoesView}>
                 <Text>Seja bem vindo, {nome}!!</Text>
 
-                <TouchableOpacity style={styles.Territorios}>
+                <TouchableOpacity style={styles.Territorios} onPress={()=>Territorios()}>
                     <Image source={require('./img/Gumball.png')} style={{resizeMode: 'center', height: 70}}></Image>
                     <Text style={{textAlign: 'center'}}>Visitar territórios</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.editarPerfil}>
                     <Image source={require('./img/Jake.png')} style={{resizeMode: 'center', height: 70}}></Image>
-                    <Text style={{textAlign: 'center'}}>Editar perfil</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.sobreNós}>
-                <Image source={require('./img/Rigby.png')} style={{resizeMode: 'center', height: 70}}></Image>
-                <Text style={{textAlign: 'center'}}>Sobre nós</Text>
+                    <Text style={{textAlign: 'center'}}>Sobre nós</Text>
                 </TouchableOpacity>
             </View> 
 
