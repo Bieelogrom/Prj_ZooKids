@@ -3,43 +3,60 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container:{
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: 'column',
+        backgroundColor: '#FFFFFF',
+        
     },
 
-    image: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+    navbar: {
         width: '100%',
-      },
+        height: 135,
+        backgroundColor: '#000000',
+        justifyContent: 'center'
+    },
 
-      View_Inputs: {
+    navbar_Logo: {
+        height: 60,
+        resizeMode: 'contain',
+
+    },
+
+    botoesView:{
         flex: 1,
         flexDirection: "column",
-        justifyContent: "space-evenly",
+        justifyContent: 'space-around',
+        alignItems: 'center'
+    },
 
-      },
+    Territorios: {
+        justifyContent: 'center',
+        backgroundColor: '#219C90',
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        borderColor: 'black',
+        borderWidth: 1,
+    },
 
-    input: {
-        backgroundColor: '#FFFFFF',
-        borderWidth: 3,
-        borderColor: "#32936F",
-        color: 'black',
-        height: 50,
-        width: '90%',
-        margin: 12,
-        textAlign: 'center',
-        borderRadius: 10,
+    editarPerfil: {
+        justifyContent: 'center',
+        backgroundColor: '#E9B824',
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        borderColor: 'black',
+        borderWidth: 1,
+    },
 
+    sobreNós: {
+        justifyContent: 'center',
+        backgroundColor: '#D83F31',
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        borderColor: 'black',
+        borderWidth: 1,
+    }
 
-      },
-
-      btnEnviar: {
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF99',
-        width: '90%',
-        borderRadius: 10,
-        padding: 15,
-      },
+    
 })

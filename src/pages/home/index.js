@@ -1,46 +1,40 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import styles from './style';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useState } from 'react';
+
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+
+let nome = localStorage.getItem("nome")
 
 export default function Home(){
-    const [nome, setNome] = useState("")
-
-    function enviarCadastro(){
-        console.log(nome)
-    }
-
-
-
+    const navigation = useNavigation ();
     return(
-        <SafeAreaView style={styles.container}>
-                    
-        <View style={styles.View_Inputs}>
-        <TextInput
-                style={styles.input}
-                placeholder="Nome"
-                onChangeText={(text) => setNome(text)}
-            />
+        <View style={styles.container}>
+            <View style={styles.navbar}>
+            <Image source={require('./img/CartoonLogo.png')} style={styles.navbar_Logo}></Image>
+            </View>
 
-            <TextInput
-                style={styles.input}
-                placeholder="Email"
-            />
+            <View style={styles.botoesView}>
+                <Text>Seja bem vindo, {nome}!!</Text>
 
-            <TextInput
-                style={styles.input}
-                placeholder="Senha"
-                keyboardType="numeric"
-            />
+                <TouchableOpacity style={styles.Territorios}>
+                    <Image source={require('./img/Gumball.png')} style={{resizeMode: 'center', height: 70}}></Image>
+                    <Text style={{textAlign: 'center'}}>Visitar territórios</Text>
+                </TouchableOpacity>
 
-            <TouchableOpacity style={styles.btnEnviar} onPress={enviarCadastro()} >
-                <Text>Cadastrar</Text>
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.editarPerfil}>
+                    <Image source={require('./img/Jake.png')} style={{resizeMode: 'center', height: 70}}></Image>
+                    <Text style={{textAlign: 'center'}}>Editar perfil</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.sobreNós}>
+                <Image source={require('./img/Rigby.png')} style={{resizeMode: 'center', height: 70}}></Image>
+                <Text style={{textAlign: 'center'}}>Sobre nós</Text>
+                </TouchableOpacity>
+            </View> 
+
+
+
         </View>
-
-            <StatusBar style="auto" />
-    
-        </SafeAreaView>
     );
 }
