@@ -6,13 +6,10 @@ import { useState } from 'react';
 
 export default function Home(){
     const [nome, setNome] = useState(null);
-    const [email, setEmail] = useState(null);
-    const [senha, setSenha] = useState(null);
+
 
     const enviarCadastro = () => {
         localStorage.setItem("nome", nome);
-        localStorage.setItem("email", email);
-        localStorage.setItem("senha", senha);
         navigation.navigate('BemVindo')
         
     }
@@ -23,28 +20,20 @@ export default function Home(){
         <SafeAreaView style={styles.container}>
                     
         <View style={styles.View_Inputs}>
+
+        <Text style={styles.tituloCadastro}>Informações do Usuário</Text>
+
         <TextInput
                 style={styles.input}
                 placeholder="Nome"
                 onChangeText={text => setNome(text)}
             />
-
-            <TextInput
-                style={styles.input}
-                placeholder="Email"
-                onChangeText={text => setEmail(text)}
-            />
-
-            <TextInput
-                style={styles.input}
-                placeholder="Senha"
-                keyboardType="numeric"
-                onChangeText={text => setSenha(text)}
-            />
+            <Text style={styles.textinhoInpur}>Escolha um nome para utilizar durante o uso do</Text>
 
             <TouchableOpacity style={styles.btnEnviar} onPress={()=> enviarCadastro()} >
                 <Text>Cadastrar</Text>
             </TouchableOpacity>
+
         </View>
 
             <StatusBar style="auto" />

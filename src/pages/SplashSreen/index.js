@@ -10,10 +10,9 @@ export default function ({ navigation }) {
         if (localStorage.getItem("nome") != null) {
           navigation.navigate("BemVindo");
         } else {
-          console.log("Test2");
-          navigation.navigate("Home");
+          navigation.navigate("Cadastro");
         }
-      }, 1000);
+      }, 4500);
     });
 
   return (

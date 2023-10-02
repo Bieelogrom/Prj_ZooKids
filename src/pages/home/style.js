@@ -18,7 +18,7 @@ export default StyleSheet.create({
     },
 
     navbar_Logo: {
-        height: 60,
+        height: 90,
         resizeMode: 'contain',
 
     },
@@ -33,9 +33,9 @@ export default StyleSheet.create({
     Territorios: {
         justifyContent: 'center',
         backgroundColor: '#219C90',
-        width: 120,
-        height: 120,
-        borderRadius: 60,
+        width: 180,
+        height: 180,
+        borderRadius: 120,
         borderColor: 'black',
         borderWidth: 1,
     },
@@ -43,9 +43,9 @@ export default StyleSheet.create({
     editarPerfil: {
         justifyContent: 'center',
         backgroundColor: '#E9B824',
-        width: 120,
-        height: 120,
-        borderRadius: 60,
+        width: 180,
+        height: 180,
+        borderRadius: 120,
         borderColor: 'black',
         borderWidth: 1,
     },
@@ -53,11 +53,36 @@ export default StyleSheet.create({
     sobreNós: {
         justifyContent: 'center',
         backgroundColor: '#D83F31',
-        width: 120,
-        height: 120,
-        borderRadius: 60,
+        width: 240,
+        height: 240,
+        borderRadius: 120,
         borderColor: 'black',
         borderWidth: 1,
+    },
+
+    textLButtons: {
+        textAlign: "center",
+        backgroundColor: "white",
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: "black",
+        fontSize: 30,
+        fontWeight: "bold",
+        fontFamily: "YanoneKaffeesatz_700Bold"
+    },
+
+    fonteButondois: {
+        fontSize: 40,
+        fontWeight: "bold",
+        fontFamily: "YanoneKaffeesatz_700Bold",
+        color: "red"
+    },
+
+
+    fonteTela: {
+        fontFamily: "YanoneKaffeesatz_400Regular",
+        fontSize: 40,
+
     }
 
     

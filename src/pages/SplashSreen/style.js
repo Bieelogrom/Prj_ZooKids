@@ -8,7 +8,7 @@ export default StyleSheet.create({
     },
 
     cartoonLogo:{
-        height: 600,
+        height: 500,
     
     }
 

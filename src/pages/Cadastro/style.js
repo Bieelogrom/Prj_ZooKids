@@ -17,7 +17,8 @@ export default StyleSheet.create({
       View_Inputs: {
         flex: 1,
         flexDirection: "column",
-        justifyContent: "space-evenly",
+        gap: 20,
+        justifyContent: "center"
 
       },
 
@@ -42,4 +43,18 @@ export default StyleSheet.create({
         borderRadius: 10,
         padding: 15,
       },
+
+      tituloCadastro: {
+        fontFamily: "YanoneKaffeesatz_700Bold",
+        fontSize: 45,
+        textAlign: "center"
+
+      },
+
+      textinhoInpur: {
+        fontFamily: "YanoneKaffeesatz_400Regular",
+        fontSize: 20,
+        textAlign: "center",
+        
+      }
 })

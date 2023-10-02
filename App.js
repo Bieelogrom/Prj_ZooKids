@@ -8,10 +8,20 @@ import Territorios from './src/pages/Territorios';
 import Cadastro from './src/pages/Cadastro';
 import Sobre from './src/pages/Sobre';
 
+import { useFonts, YanoneKaffeesatz_400Regular, YanoneKaffeesatz_700Bold } from '@expo-google-fonts/yanone-kaffeesatz';
+
 
 const Stack = createNativeStackNavigator ();
 
 export default function app(){
+
+  const[fontLoaded] = useFonts({
+    YanoneKaffeesatz_400Regular,
+    YanoneKaffeesatz_700Bold
+  })
+  if(!fontLoaded){
+    return null;
+  }
 
   return(
     <NavigationContainer> 

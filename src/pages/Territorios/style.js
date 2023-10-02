@@ -55,6 +55,24 @@ export default StyleSheet.create({
 
     },
 
+    fonteMenu_modal:{
+        fontSize: 40,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center",
+        fontFamily: "YanoneKaffeesatz_700Bold",
+        marginTop: 20
+    },
+
+    fonteMenu_modal_black:{
+        fontSize: 30,
+        fontWeight: "bold",
+        color: "black",
+        textAlign: "center",
+        fontFamily: "YanoneKaffeesatz_700Bold",
+        marginTop: 20
+    },
+
     
     territorios_navegacao: {
         width: "100%",
@@ -85,6 +103,17 @@ export default StyleSheet.create({
     button_gif: {
         height: 80,
         resizeMode: 'center'
+    },
+
+    textLButtons: {
+        textAlign: "center",
+        backgroundColor: "white",
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: "black",
+        fontSize: 30,
+        fontWeight: "bold",
+        fontFamily: "YanoneKaffeesatz_700Bold"
     }
 
 })

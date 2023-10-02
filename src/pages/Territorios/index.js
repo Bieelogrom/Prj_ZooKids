@@ -12,6 +12,7 @@ import {
 import styles from "./style";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Home() {
   const navigation = useNavigation();
@@ -28,6 +29,12 @@ export default function Home() {
 
   function fecharModal() {
     setModal(false);
+  }
+
+  function editarConta() {
+    AsyncStorage.clear();
+    setModal(false);
+    navigation.navigate("Cadastro");
   }
 
   return (
@@ -51,44 +58,67 @@ export default function Home() {
       </View>
 
       <View style={styles.territorios_navegacao}>
+        <View>
+          <Text style={styles.fonteMenu_modal_black}>
+            Selecione um território para visitar!
+          </Text>
+        </View>
         <ScrollView horizontal>
           <View style={styles.ScroolView}>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/onça.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/tucano.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/preguila.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/leao.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/macaco.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
-            <View style={styles.Territorios}>
-              <Image
-                source={require("./img/coruja.gif")}
-                style={styles.button_gif}
-              ></Image>
-            </View>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/onça.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 1</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/tucano.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 2</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/preguila.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 3</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/leao.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 4</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/macaco.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 5</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.Territorios}>
+                <Image
+                  source={require("./img/coruja.gif")}
+                  style={styles.button_gif}
+                ></Image>
+                <Text style={styles.textLButtons}>Território 6</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
@@ -97,16 +127,21 @@ export default function Home() {
         <View style={styles.modal}>
           <View style={styles.modalMenu}>
             <View style={styles.modal_Navbar}>
-              <Text style={{ textAlign: "center" }}>MENU</Text>
+              <Text style={styles.fonteMenu_modal}>MENU</Text>
             </View>
 
-            <View>
-              <TouchableOpacity>
-                <Text>Editar Perfil</Text>
+            <View
+              style={{
+                flexDirection: "column",
+                justifyContent: "space-around",
+              }}
+            >
+              <TouchableOpacity onPress={() => editarConta()}>
+                <Text style={styles.fonteMenu_modal}>Editar Perfil</Text>
               </TouchableOpacity>
 
               <TouchableOpacity onPress={() => fecharModal()}>
-                <Text>Fechar Menu</Text>
+                <Text style={styles.fonteMenu_modal}>Fechar Menu</Text>
               </TouchableOpacity>
             </View>
           </View>

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, I
 import styles from './style';
 
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import Sobre from '../Sobre';
 
 let nome = localStorage.getItem("nome")
 
@@ -13,6 +14,10 @@ export default function Home(){
         navigation.navigate('Territorios')
       }  
 
+    function SobreNos () {
+        navigation.navigate('Sobre')
+    }
+
 
     return(
         <View style={styles.container}>
@@ -21,16 +26,16 @@ export default function Home(){
             </View>
 
             <View style={styles.botoesView}>
-                <Text>Seja bem vindo, {nome}!!</Text>
+                <Text style={styles.fonteTela}>Seja bem vindo, <Text style={styles.fonteButondois}>{nome}!!</Text></Text>
 
                 <TouchableOpacity style={styles.Territorios} onPress={()=>Territorios()}>
-                    <Image source={require('./img/Gumball.png')} style={{resizeMode: 'center', height: 70}}></Image>
-                    <Text style={{textAlign: 'center'}}>Visitar territórios</Text>
+                    <Image source={require('./img/Gumball.png')} style={{resizeMode: 'center', height: 90}}></Image>
+                    <Text style={styles.textLButtons}>Visitar territórios</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.editarPerfil}>
-                    <Image source={require('./img/Jake.png')} style={{resizeMode: 'center', height: 70}}></Image>
-                    <Text style={{textAlign: 'center'}}>Sobre nós</Text>
+                <TouchableOpacity style={styles.editarPerfil} onPress={() => SobreNos()}>
+                    <Image source={require('./img/Jake.png')} style={{resizeMode: 'center', height: 90}}></Image>
+                    <Text style={styles.textLButtons}>Sobre nós</Text>
                 </TouchableOpacity>
             </View> 
 
