@@ -18,8 +18,14 @@ import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Home(){
+  const navigation = useNavigation(); 
+
     const [nome, setNome] = useState(null);
     const [nometemporario, setNomeTemporario] = useState(null);
+
+    function Retornar() {
+      navigation.navigate("BemVindo");
+    }
 
     let KeyNome = AsyncStorage.getItem("nome")
 
@@ -34,13 +40,6 @@ export default function Home(){
               <Text>Retornar</Text>
             </TouchableOpacity>
     
-            <TouchableOpacity onPress={() => ativarModal()}>
-              <Image
-                source={require("./img/Config.png")}
-                style={styles.navbar_Logo}
-              ></Image>
-              <Text>Menu</Text>
-            </TouchableOpacity>
           </View>)
         }else{
             return null

@@ -36,6 +36,11 @@ export default function Home() {
     navigation.navigate("Cadastro");
   }
 
+  function navegarTerritorio(zona) {
+    navigation.navigate(zona)
+  }
+
+
   return (
     <View style={styles.container}>
       <View style={styles.navbar}>
@@ -64,7 +69,7 @@ export default function Home() {
         </View>
         <ScrollView horizontal>
           <View style={styles.ScroolView}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navegarTerritorio("Zona1")}>
               <View style={styles.Territorios}>
                 <Image
                   source={require("./img/Onça.gif")}
