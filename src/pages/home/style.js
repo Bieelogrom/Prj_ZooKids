@@ -18,7 +18,7 @@ export default StyleSheet.create({
     },
 
     navbar_Logo: {
-        height: 90,
+        height: 160,
         resizeMode: 'contain',
 
     },

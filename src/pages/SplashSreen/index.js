@@ -17,7 +17,7 @@ export default function ({ navigation }) {
 
   return (
     <View style={styles.container}>
-        <Image source={require('./imgs/cartoon.gif')} style={styles.cartoonLogo}></Image>
+        <Image source={require('./imgs/Cartoon.gif')} style={styles.cartoonLogo}></Image>
 
       <StatusBar style="auto" />
     </View>

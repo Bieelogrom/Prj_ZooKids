@@ -1,5 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  ImageBackground,
+  ScrollView,
+  Modal,
+} from "react-native";
 import styles from "./style";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { useState } from "react";
@@ -23,7 +32,6 @@ export default function () {
   }
 
   function editarConta() {
-    AsyncStorage.clear();
     setModal(false);
     navigation.navigate("Cadastro");
   }

@@ -4,11 +4,14 @@ import styles from './style';
 
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import Sobre from '../Sobre';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-let nome = localStorage.getItem("nome")
+
 
 export default function Home(){
     const navigation = useNavigation ();
+
+    const nome = localStorage.getItem("nome")
 
     function Territorios () {
         navigation.navigate('Territorios')
@@ -22,7 +25,7 @@ export default function Home(){
     return(
         <View style={styles.container}>
             <View style={styles.navbar}>
-            <Image source={require('./img/CartoonLogo.png')} style={styles.navbar_Logo}></Image>
+            <Image source={require('./img/cartoon-network-cartoon.gif')} style={styles.navbar_Logo}></Image>
             </View>
 
             <View style={styles.botoesView}>

@@ -32,7 +32,6 @@ export default function Home() {
   }
 
   function editarConta() {
-    AsyncStorage.clear();
     setModal(false);
     navigation.navigate("Cadastro");
   }
@@ -68,7 +67,7 @@ export default function Home() {
             <TouchableOpacity>
               <View style={styles.Territorios}>
                 <Image
-                  source={require("./img/onça.gif")}
+                  source={require("./img/Onça.gif")}
                   style={styles.button_gif}
                 ></Image>
                 <Text style={styles.textLButtons}>Território 1</Text>
