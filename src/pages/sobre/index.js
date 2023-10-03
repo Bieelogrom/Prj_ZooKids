@@ -8,6 +8,7 @@ import {
   ImageBackground,
   ScrollView,
   Modal,
+  Linking 
 } from "react-native";
 import styles from "./style";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
@@ -54,6 +55,15 @@ export default function () {
           <Text>Menu</Text>
         </TouchableOpacity>
       </View>
+
+      <TouchableOpacity onPress={() => {{Linking.openURL('https://github.com/Bieelogrom')}}}>
+      
+          <ImageBackground source={require('./imgs/perfil.png')} style={styles.Territorios}>
+              <Text style={styles.textLButtons}>Meu github</Text>
+          </ImageBackground>
+
+      </TouchableOpacity>
+
 
       <Modal visible={modal} transparent animationType="fade">
         <View style={styles.modal}>

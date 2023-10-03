@@ -49,9 +49,9 @@ export default StyleSheet.create({
     },
 
     navbar_Logo_modal: {
-        height: 45,
-        width: 45,
-        marginLeft: 10
+        height: 200,
+        width: 200,
+        borderRadius: 20
 
     },
 
@@ -84,11 +84,12 @@ export default StyleSheet.create({
     Territorios: {
         justifyContent: 'center',
         backgroundColor: '#219C90',
-        width: 120,
-        height: 120,
-        borderRadius: 60,
+        width: 240,
+        height: 240,
+        borderRadius: 200,
         borderColor: 'black',
         borderWidth: 1,
+        marginTop: 80,
     },
 
     ScroolView: {
@@ -114,6 +115,8 @@ export default StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         fontFamily: "YanoneKaffeesatz_700Bold"
-    }
+    },
+
+
 
 })

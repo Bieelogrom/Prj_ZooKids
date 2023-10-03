@@ -61,6 +61,14 @@ export default StyleSheet.create({
     marginTop: 20,
   },
 
+  fonteMenu_modal_animais: {
+    fontSize: 35,
+    color: "white",
+    textAlign: "justify",
+    fontFamily: "YanoneKaffeesatz_700Bold",
+    marginTop: 20,
+  },
+
   fonteMenu_modal_black: {
     fontSize: 30,
     fontWeight: "bold",
@@ -125,7 +133,14 @@ export default StyleSheet.create({
   },
 
   textAnimais: {
+    fontFamily: "YanoneKaffeesatz_700Bold",
     color: "white",
-    fontSize: 20,
+    fontSize: 40,
   },
+
+  imagemFundo: {
+    width: 300,
+    height: 175,
+   resizeMode: 'contain'
+  }
 });
